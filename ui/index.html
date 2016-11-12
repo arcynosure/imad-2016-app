@@ -132,7 +132,7 @@
           marked the advent of a new era.The developement of scriptures gave education a new phase.Beginning from
           the earliest written rig veda in Bhojpatras and pamphlets to the modern day e-booksand blogs which one   
           can download from the internet, the method of preserving values and information in a written format has 
-          come past a long way.Indeed there is nodoubt the modern day blogs are the most effective and fast way
+          come past a long way.Indeed there is no doubt the modern day blogs are the most effective and fast way
           to convey ideas and information. 
           
           
@@ -204,16 +204,16 @@ function loadLoginForm () {
         `;
  document.getElementById('login_area').innerHTML = loginHtml;
     
-    // Submit username/password to login
+    
     var submit = document.getElementById('login_btn');
     submit.onclick = function () {
-        // Create a request object
+        
         var request = new XMLHttpRequest();
         
-        // Capture the response and store it in a variable
+        
         request.onreadystatechange = function () {
           if (request.readyState === XMLHttpRequest.DONE) {
-              // Take some action
+              
               if (request.status === 200) {
                   submit.value = 'Sucess!';
               } else if (request.status === 403) {
@@ -227,10 +227,10 @@ function loadLoginForm () {
               }
               loadLogin();
           }  
-          // Not done yet
+          
         };
         
-        // Make the request
+        
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
         console.log(username);
@@ -244,13 +244,13 @@ function loadLoginForm () {
     
     var register = document.getElementById('register_btn');
     register.onclick = function () {
-        // Create a request object
+       
         var request = new XMLHttpRequest();
         
-        // Capture the response and store it in a variable
+        
         request.onreadystatechange = function () {
           if (request.readyState === XMLHttpRequest.DONE) {
-              // Take some action
+              
               if (request.status === 200) {
                   alert('User created successfully');
                   register.value = 'Registered!';
@@ -261,7 +261,7 @@ function loadLoginForm () {
           }
         };
         
-        // Make the request
+       
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
         console.log(username);
@@ -281,7 +281,7 @@ function loadLoggedInUser (username) {
     `;
 }
 function loadLogin () {
-    // Check if the user is already logged in
+    
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -297,7 +297,7 @@ function loadLogin () {
     request.send(null);
 }
 function loadArticles () {
-        // Check if the user is already logged in
+       
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {

@@ -274,6 +274,7 @@ function loadLoginForm () {
     };
 }
 function loadLoggedInUser (username) {
+    loadArticles();
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
         <h3> Hi <i>${username}</i></h3>
@@ -287,6 +288,7 @@ function loadLogin () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
                 loadLoggedInUser(this.responseText);
+              
             } else {
                 loadLoginForm();
             }
@@ -323,7 +325,7 @@ function loadArticles () {
 }
 
 loadLogin();
-loadArticles();
+
 </script>
 </body>
 </html>
